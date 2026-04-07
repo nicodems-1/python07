@@ -1,7 +1,14 @@
-from ex1 import GrassFactory, NormalFactory
+from ex1 import (
+    GrassFactory,
+    NormalFactory,
+    CreatureFactory,
+    HealCapability,
+    TransformCapability,
+)
+from typing import cast
 
 
-def battle_script():
+def battle_script() -> None:
     grass = GrassFactory()
     normal = NormalFactory()
     healing_creation(grass)
@@ -9,36 +16,36 @@ def battle_script():
     transform_creation(normal)
 
 
-def healing_creation(creaturefactory) -> None:
+def healing_creation(creaturefactory: CreatureFactory) -> None:
     print("Testing Creature with healing capacity")
     pokemon = creaturefactory.create_base()
     pokemon_evo = creaturefactory.create_evolved()
     print(" base:")
     print(pokemon.describe())
     print(pokemon.attack())
-    print(pokemon.heal())
+    print(cast(HealCapability, pokemon).heal)
     print(" evolved")
     print(pokemon_evo.describe())
     print(pokemon_evo.attack())
-    print(pokemon_evo.heal())
+    print(cast(HealCapability, pokemon_evo).heal)
 
 
-def transform_creation(creaturefactory) -> None:
+def transform_creation(creaturefactory: CreatureFactory) -> None:
     print("Testing Creature with transform capability")
     pokemon = creaturefactory.create_base()
     pokemon_evo = creaturefactory.create_evolved()
     print(" base:")
     print(pokemon.describe())
     print(pokemon.attack())
-    print(pokemon.transform())
+    print(cast(TransformCapability, pokemon).transform())
     print(pokemon.attack())
-    print(pokemon.revert())
+    print(cast(TransformCapability, pokemon).revert())
     print(" evolved")
     print(pokemon_evo.describe())
     print(pokemon_evo.attack())
-    print(pokemon_evo.transform())
+    print(cast(TransformCapability, pokemon_evo).transform())
     print(pokemon_evo.attack())
-    print(pokemon_evo.transform())
+    print(cast(TransformCapability, pokemon_evo).transform())
 
 
 if __name__ == "__main__":

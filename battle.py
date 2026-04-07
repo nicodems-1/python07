@@ -1,7 +1,7 @@
-from ex0 import FlameFactory, AquaFactory
+from ex0 import FlameFactory, AquaFactory, CreatureFactory
 
 
-def battle_script():
+def battle_script() -> None:
     flame = FlameFactory()
     aqua = AquaFactory()
     verify_creation(aqua)
@@ -11,7 +11,7 @@ def battle_script():
     creature_fight(aqua, flame)
 
 
-def verify_creation(creaturefactory) -> None:
+def verify_creation(creaturefactory: CreatureFactory) -> None:
     print("Testing factory")
     pokemon = creaturefactory.create_base()
     pokemon_evo = creaturefactory.create_evolved()
@@ -21,7 +21,7 @@ def verify_creation(creaturefactory) -> None:
         print(card.attack())
 
 
-def creature_fight(factory1, factory2) -> None:
+def creature_fight(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
     print("Testing battle")
     fighter1 = factory1.create_base()
     fighter2 = factory2.create_base()

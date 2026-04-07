@@ -2,7 +2,7 @@ from ex2 import GrassFactory, NormalFactory, FlameFactory, AquaFactory
 from ex2 import NormalStrategy, AggressiveStrategy, DefensiveStrategy
 
 
-def tournament_script():
+def tournament_script() -> None:
     flame_fac = FlameFactory()
     aqua_fac = AquaFactory()
     grass_fac = GrassFactory()
@@ -20,7 +20,7 @@ def tournament_script():
     )
 
 
-def battle(opponents: list):
+def battle(opponents: list) -> None:
     creatures = []
     strategies = []
     status = []

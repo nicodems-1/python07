@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Creature(ABC):
-    def __init__(self, name, poketype):
+    def __init__(self, name: str, poketype: str):
         self.name = name
         self.poketype = poketype
 
@@ -15,32 +15,32 @@ class Creature(ABC):
 
 
 class Flameling(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Flameling", "Fire")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Flameling use Ember!"
 
 
 class Pyrodon(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Pyrodon", "Fire/Flying")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Pyrodon use Flamethrower!"
 
 
 class Aquabub(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Aquabub", "Water")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Aquabub use Water Gun!"
 
 
 class Torragon(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Torragon", "Water")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Torragon use Hydro Pump!"

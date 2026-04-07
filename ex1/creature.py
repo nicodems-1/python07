@@ -3,7 +3,7 @@ from .capability import HealCapability, TransformCapability
 
 
 class Creature(ABC):
-    def __init__(self, name, poketype):
+    def __init__(self, name: str, poketype: str):
         self.name = name
         self.poketype = poketype
 
@@ -16,77 +16,77 @@ class Creature(ABC):
 
 
 class Flameling(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Flameling", "Fire")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Flameling use Ember!"
 
 
 class Pyrodon(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Pyrodon", "Fire/Flying")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Pyrodon use Flamethrower!"
 
 
 class Aquabub(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Aquabub", "Water")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Aquabub use Water Gun!"
 
 
 class Torragon(Creature):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Torragon", "Water")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Torragon use Hydro Pump!"
 
 
 class Sproutling(Creature, HealCapability):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Spoutling", "Grass")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Sproutling uses Vine Whip!"
 
-    def heal(self):
+    def heal(self) -> str:
         return "Sproutling heals itself for a small amount"
 
 
 class Bloomelle(Creature, HealCapability):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Bloomelle", "Grass/Fairy")
 
-    def attack(self):
+    def attack(self) -> str:
         return "Bloomelle use Petal Dance!"
 
-    def heal(self):
+    def heal(self) -> str:
         return "Bloomelle heals itself for a large amount"
 
 
 class Shiftling(Creature, TransformCapability):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Shiftling", "Normal")
         self.evo = 0
 
-    def attack(self):
+    def attack(self) -> str:
         if self.evo == 0:
             return "Shiftling attacks normally."
         return "Shiftling performs a boosted strike!"
 
-    def transform(self):
+    def transform(self) -> str:
         if self.evo == 0:
             self.evo = 1
             return "Shiftling shifts into a sharper form!"
         else:
             return "Shiftling stabilize its form"
 
-    def revert(self):
+    def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
             return "Shiftling return to normal."
@@ -95,23 +95,23 @@ class Shiftling(Creature, TransformCapability):
 
 
 class Morphagon(Creature, TransformCapability):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__("Morphagon", "Normal")
         self.evo = 0
 
-    def attack(self):
+    def attack(self) -> str:
         if self.evo == 0:
             return "Morphagon attacks normally."
         return "Morphagon unleashes a devastating morph strike!"
 
-    def transform(self):
+    def transform(self) -> str:
         if self.evo == 0:
             self.evo = 1
             return "Morphagon shifts into a sharper form!"
         else:
             return "Morphagon stabilize its form"
 
-    def revert(self):
+    def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
             return "Morphagon return to normal."
