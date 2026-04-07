@@ -25,7 +25,7 @@ class NormalStrategy(BattleStrategy):
             raise ValueError(
                 f"Battle error, aborting tournament: "
                 f"Invalid Creature '{creature.name}' "
-                f"  for this normal strategy"
+                f"for this normal strategy"
             )
 
 
@@ -42,7 +42,7 @@ class AggressiveStrategy(BattleStrategy):
             raise ValueError(
                 f"Battle error, aborting tournament: "
                 f"Invalid Creature '{creature.name}' "
-                f"  for this aggressive strategy"
+                f"for this aggressive strategy"
             )
 
 
@@ -58,5 +58,5 @@ class DefensiveStrategy(BattleStrategy):
             raise ValueError(
                 f"Battle error, aborting tournament: "
                 f"Invalid Creature '{creature.name}' "
-                f"  for this defensive strategy"
+                f"for this defensive strategy"
             )

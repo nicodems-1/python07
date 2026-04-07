@@ -4,7 +4,13 @@ from ex2 import (
     FlameFactory,
     AquaFactory,
 )
-from ex2 import NormalStrategy, AggressiveStrategy, DefensiveStrategy
+from ex2 import (
+    NormalStrategy,
+    AggressiveStrategy,
+    DefensiveStrategy,
+    BattleStrategy,
+    CreatureFactory,
+)
 
 
 def tournament_script() -> None:
@@ -25,7 +31,7 @@ def tournament_script() -> None:
     )
 
 
-def battle(opponents: list) -> None:
+def battle(opponents: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
     creatures = []
     strategies = []
     status = []
