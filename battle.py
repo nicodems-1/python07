@@ -21,7 +21,9 @@ def verify_creation(creaturefactory: CreatureFactory) -> None:
         print(card.attack())
 
 
-def creature_fight(factory1: CreatureFactory, factory2: CreatureFactory) -> None:
+def creature_fight(
+    factory1: CreatureFactory, factory2: CreatureFactory
+) -> None:
     print("Testing battle")
     fighter1 = factory1.create_base()
     fighter2 = factory2.create_base()

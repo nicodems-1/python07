@@ -1,1 +1,1 @@
-from .factory import FlameFactory, AquaFactory,  CreatureFactory # noqa: F401
+from .factory import (FlameFactory, AquaFactory, CreatureFactory)  # noqa: F401
