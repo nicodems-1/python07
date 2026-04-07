@@ -23,7 +23,7 @@ class NormalStrategy(BattleStrategy):
             print(creature.attack())
         else:
             raise ValueError(
-                f"Battle error, aborting tournament:"
+                f"Battle error, aborting tournament: "
                 f"Invalid Creature '{creature.name}' "
                 f"  for this normal strategy"
             )
@@ -40,7 +40,7 @@ class AggressiveStrategy(BattleStrategy):
             print(cast(TransformCapability, creature).revert())
         else:
             raise ValueError(
-                f"Battle error, aborting tournament:"
+                f"Battle error, aborting tournament: "
                 f"Invalid Creature '{creature.name}' "
                 f"  for this aggressive strategy"
             )
@@ -57,6 +57,6 @@ class DefensiveStrategy(BattleStrategy):
         else:
             raise ValueError(
                 f"Battle error, aborting tournament: "
-                f"Invalid Creature '{creature.name}'"
+                f"Invalid Creature '{creature.name}' "
                 f"  for this defensive strategy"
             )

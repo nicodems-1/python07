@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Creature(ABC):
-    def __init__(self, name: str, poketype: str):
+    def __init__(self, name: str, poketype: str) -> None:
         self.name = name
         self.poketype = poketype
 

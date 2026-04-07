@@ -23,11 +23,11 @@ def healing_creation(creaturefactory: CreatureFactory) -> None:
     print(" base:")
     print(pokemon.describe())
     print(pokemon.attack())
-    print(cast(HealCapability, pokemon).heal)
+    print(cast(HealCapability, pokemon).heal())
     print(" evolved")
     print(pokemon_evo.describe())
     print(pokemon_evo.attack())
-    print(cast(HealCapability, pokemon_evo).heal)
+    print(cast(HealCapability, pokemon_evo).heal())
 
 
 def transform_creation(creaturefactory: CreatureFactory) -> None:

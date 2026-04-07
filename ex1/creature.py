@@ -3,7 +3,7 @@ from .capability import HealCapability, TransformCapability
 
 
 class Creature(ABC):
-    def __init__(self, name: str, poketype: str):
+    def __init__(self, name: str, poketype: str) -> None:
         self.name = name
         self.poketype = poketype
 
@@ -63,7 +63,7 @@ class Bloomelle(Creature, HealCapability):
         super().__init__("Bloomelle", "Grass/Fairy")
 
     def attack(self) -> str:
-        return "Bloomelle use Petal Dance!"
+        return "Bloomelle uses Petal Dance!"
 
     def heal(self) -> str:
         return "Bloomelle heals itself for a large amount"
@@ -89,7 +89,7 @@ class Shiftling(Creature, TransformCapability):
     def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
-            return "Shiftling return to normal."
+            return "Shiftling returns to normal."
         else:
             return "Shiftling stabilize its form"
 
@@ -114,6 +114,6 @@ class Morphagon(Creature, TransformCapability):
     def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
-            return "Morphagon return to normal."
+            return "Morphagon returns to normal."
         else:
             return "Morphagon stabilize its form"

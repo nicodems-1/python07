@@ -3,7 +3,7 @@ from .capability import HealCapability, TransformCapability
 
 
 class Creature(ABC):
-    def __init__(self, name: str, poketype: str):
+    def __init__(self, name: str, poketype: str) -> None:
         self.name = name
         self.poketype = poketype
 
@@ -20,7 +20,7 @@ class Flameling(Creature):
         super().__init__("Flameling", "Fire")
 
     def attack(self) -> str:
-        return "Flameling use Ember!"
+        return "Flameling uses Ember!"
 
 
 class Pyrodon(Creature):
@@ -28,7 +28,7 @@ class Pyrodon(Creature):
         super().__init__("Pyrodon", "Fire/Flying")
 
     def attack(self) -> str:
-        return "Pyrodon use Flamethrower!"
+        return "Pyrodon uses Flamethrower!"
 
 
 class Aquabub(Creature):
@@ -36,7 +36,7 @@ class Aquabub(Creature):
         super().__init__("Aquabub", "Water")
 
     def attack(self) -> str:
-        return "Aquabub use Water Gun!"
+        return "Aquabub uses Water Gun!"
 
 
 class Torragon(Creature):
@@ -44,7 +44,7 @@ class Torragon(Creature):
         super().__init__("Torragon", "Water")
 
     def attack(self) -> str:
-        return "Torragon use Hydro Pump!"
+        return "Torragon uses Hydro Pump!"
 
 
 class Sproutling(Creature, HealCapability):
@@ -63,7 +63,7 @@ class Bloomelle(Creature, HealCapability):
         super().__init__("Bloomelle", "Grass/Fairy")
 
     def attack(self) -> str:
-        return "Bloomelle use Petal Dance!"
+        return "Bloomelle uses Petal Dance!"
 
     def heal(self) -> str:
         return "Bloomelle heals itself for a large amount"
@@ -84,14 +84,14 @@ class Shiftling(Creature, TransformCapability):
             self.evo = 1
             return "Shiftling shifts into a sharper form!"
         else:
-            return "Shiftling stabilize its form"
+            return "Shiftling stabilizes its form"
 
     def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
-            return "Shiftling return to normal."
+            return "Shiftling returns to normal."
         else:
-            return "Shiftling stabilize its form"
+            return "Shiftling stabilizes its form"
 
 
 class Morphagon(Creature, TransformCapability):
@@ -109,11 +109,11 @@ class Morphagon(Creature, TransformCapability):
             self.evo = 1
             return "Morphagon shifts into a sharper form!"
         else:
-            return "Morphagon stabilize its form"
+            return "Morphagon stabilizes its form"
 
     def revert(self) -> str:
         if self.evo == 1:
             self.evo = 0
-            return "Morphagon return to normal."
+            return "Morphagon returns to normal."
         else:
-            return "Morphagon stabilize its form"
+            return "Morphagon stabilizes its form"
