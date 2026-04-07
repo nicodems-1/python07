@@ -1,7 +1,11 @@
-from .factory import ( # noqa
-    GrassFactory,
-    NormalFactory,
+from .factory import (  # noqa
+    HealingCreatureFactory,
+    TransformCreatureFactory,
     FlameFactory,
     AquaFactory,
-)  # noqa
-from .strategy import NormalStrategy, AggressiveStrategy, DefensiveStrategy # noqa
+)
+from .strategy import (  # noqa
+    NormalStrategy,
+    AggressiveStrategy,
+    DefensiveStrategy,
+)

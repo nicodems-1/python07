@@ -1,2 +1,6 @@
-from .factory import GrassFactory, NormalFactory, CreatureFactory  # noqa: F401
-from .capability import HealCapability, TransformCapability # noqa
+from .factory import (  # noqa
+    HealingCreatureFactory,
+    TransformCreatureFactory,
+    CreatureFactory,
+)
+from .capability import HealCapability, TransformCapability  # noqa

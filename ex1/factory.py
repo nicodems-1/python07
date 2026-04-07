@@ -8,7 +8,7 @@ from .creature import (
     Bloomelle,
     Shiftling,
     Morphagon,
-    Creature
+    Creature,
 )
 
 
@@ -35,7 +35,7 @@ class AquaFactory(CreatureFactory):
         return Torragon()
 
 
-class GrassFactory(CreatureFactory):
+class HealingCreatureFactory(CreatureFactory):
     def create_base(self) -> Creature:
         return Sproutling()
 
@@ -43,7 +43,7 @@ class GrassFactory(CreatureFactory):
         return Bloomelle()
 
 
-class NormalFactory(CreatureFactory):
+class TransformCreatureFactory(CreatureFactory):
     def create_base(self) -> Creature:
         return Shiftling()
 

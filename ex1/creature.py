@@ -49,7 +49,7 @@ class Torragon(Creature):
 
 class Sproutling(Creature, HealCapability):
     def __init__(self) -> None:
-        super().__init__("Spoutling", "Grass")
+        super().__init__("Sproutling", "Grass")
 
     def attack(self) -> str:
         return "Sproutling uses Vine Whip!"
@@ -84,7 +84,7 @@ class Shiftling(Creature, TransformCapability):
             self.evo = 1
             return "Shiftling shifts into a sharper form!"
         else:
-            return "Shiftling stabilize its form"
+            return "Shiftling stabilizes its form"
 
     def revert(self) -> str:
         if self.evo == 1:

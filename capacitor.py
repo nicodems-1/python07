@@ -1,6 +1,6 @@
 from ex1 import (
-    GrassFactory,
-    NormalFactory,
+    HealingCreatureFactory,
+    TransformCreatureFactory,
     CreatureFactory,
     HealCapability,
     TransformCapability,
@@ -9,8 +9,8 @@ from typing import cast
 
 
 def battle_script() -> None:
-    grass = GrassFactory()
-    normal = NormalFactory()
+    grass = HealingCreatureFactory()
+    normal = TransformCreatureFactory()
     healing_creation(grass)
     print()
     transform_creation(normal)

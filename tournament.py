@@ -1,12 +1,17 @@
-from ex2 import GrassFactory, NormalFactory, FlameFactory, AquaFactory
+from ex2 import (
+    HealingCreatureFactory,
+    TransformCreatureFactory,
+    FlameFactory,
+    AquaFactory,
+)
 from ex2 import NormalStrategy, AggressiveStrategy, DefensiveStrategy
 
 
 def tournament_script() -> None:
     flame_fac = FlameFactory()
     aqua_fac = AquaFactory()
-    grass_fac = GrassFactory()
-    normal_fac = NormalFactory()
+    grass_fac = HealingCreatureFactory()
+    normal_fac = TransformCreatureFactory()
     normal = NormalStrategy()
     aggressive = AggressiveStrategy()
     defensive = DefensiveStrategy()
